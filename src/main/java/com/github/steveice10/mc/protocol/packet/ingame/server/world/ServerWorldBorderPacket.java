@@ -14,7 +14,6 @@ import lombok.Setter;
 import java.io.IOException;
 
 @Data
-@Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ServerWorldBorderPacket implements Packet {
     private @NonNull WorldBorderAction action;

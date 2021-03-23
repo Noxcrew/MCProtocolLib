@@ -17,7 +17,6 @@ import net.kyori.adventure.text.Component;
 import java.io.IOException;
 
 @Data
-@Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ServerScoreboardObjectivePacket implements Packet {
     private @NonNull String name;

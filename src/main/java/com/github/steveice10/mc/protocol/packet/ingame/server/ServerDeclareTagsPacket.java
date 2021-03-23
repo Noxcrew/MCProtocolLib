@@ -16,7 +16,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Data
-@Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor
 public class ServerDeclareTagsPacket implements Packet {

@@ -18,7 +18,6 @@ import java.io.IOException;
 import java.util.UUID;
 
 @Data
-@Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor
 public class ServerChatPacket implements Packet {

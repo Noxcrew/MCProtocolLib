@@ -13,7 +13,6 @@ import lombok.Setter;
 import java.io.IOException;
 
 @Data
-@Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor
 public class ServerPluginMessagePacket implements Packet {

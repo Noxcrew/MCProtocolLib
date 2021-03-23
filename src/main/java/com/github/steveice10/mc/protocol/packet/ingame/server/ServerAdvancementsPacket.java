@@ -24,7 +24,6 @@ import java.util.List;
 import java.util.Map;
 
 @Data
-@Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor
 public class ServerAdvancementsPacket implements Packet {

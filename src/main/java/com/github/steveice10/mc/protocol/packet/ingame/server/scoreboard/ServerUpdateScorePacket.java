@@ -13,7 +13,6 @@ import lombok.Setter;
 import java.io.IOException;
 
 @Data
-@Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ServerUpdateScorePacket implements Packet {
     private String entry;

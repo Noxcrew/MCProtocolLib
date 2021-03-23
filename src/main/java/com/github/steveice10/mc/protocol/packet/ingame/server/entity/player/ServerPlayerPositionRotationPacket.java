@@ -16,7 +16,6 @@ import java.util.Arrays;
 import java.util.List;
 
 @Data
-@Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ServerPlayerPositionRotationPacket implements Packet {
     private double x;

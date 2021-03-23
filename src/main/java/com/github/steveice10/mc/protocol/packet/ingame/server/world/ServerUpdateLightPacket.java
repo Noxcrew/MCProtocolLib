@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.util.Arrays;
 
 @Data
-@Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ServerUpdateLightPacket implements Packet {
     private static final int NUM_ENTRIES = 18;

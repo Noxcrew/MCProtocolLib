@@ -15,7 +15,6 @@ import net.kyori.adventure.text.Component;
 import java.io.IOException;
 
 @Data
-@Setter(AccessLevel.NONE)
 public class ServerCombatPacket implements Packet {
     private CombatState combatState;
 

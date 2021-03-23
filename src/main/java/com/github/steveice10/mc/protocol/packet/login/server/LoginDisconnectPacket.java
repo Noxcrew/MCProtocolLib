@@ -15,7 +15,6 @@ import net.kyori.adventure.text.Component;
 import java.io.IOException;
 
 @Data
-@Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor
 public class LoginDisconnectPacket implements Packet {

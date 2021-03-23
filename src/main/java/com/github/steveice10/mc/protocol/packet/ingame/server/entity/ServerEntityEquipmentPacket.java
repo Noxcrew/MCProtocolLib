@@ -19,7 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor
 public class ServerEntityEquipmentPacket implements Packet {

@@ -11,7 +11,6 @@ import lombok.Setter;
 import java.io.IOException;
 
 @Data
-@Setter(AccessLevel.NONE)
 @NoArgsConstructor
 public class StatusQueryPacket implements Packet {
     @Override

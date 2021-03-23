@@ -19,7 +19,6 @@ import java.io.IOException;
 import java.util.UUID;
 
 @Data
-@Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ServerBossBarPacket implements Packet {
     private @NonNull UUID uuid;

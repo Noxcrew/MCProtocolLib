@@ -17,7 +17,6 @@ import java.security.PublicKey;
 import java.security.spec.X509EncodedKeySpec;
 
 @Data
-@Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor
 public class EncryptionRequestPacket implements Packet {

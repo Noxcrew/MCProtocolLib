@@ -22,7 +22,6 @@ import lombok.Setter;
 import java.io.IOException;
 
 @Data
-@Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class ClientWindowActionPacket implements Packet {
     public static final int CLICK_OUTSIDE_NOT_HOLDING_SLOT = -999;

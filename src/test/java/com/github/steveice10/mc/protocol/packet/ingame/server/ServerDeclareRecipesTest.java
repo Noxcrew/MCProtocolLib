@@ -7,7 +7,9 @@ import com.github.steveice10.mc.protocol.data.game.recipe.RecipeType;
 import com.github.steveice10.mc.protocol.data.game.recipe.data.*;
 import com.github.steveice10.mc.protocol.packet.PacketTest;
 import org.junit.Before;
+import org.junit.Ignore;
 
+@Ignore
 public class ServerDeclareRecipesTest extends PacketTest {
     @Before
     public void setup() {

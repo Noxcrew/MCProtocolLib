@@ -347,7 +347,7 @@ public class MinecraftProtocol extends PacketProtocol {
         return this.subProtocol;
     }
 
-    protected void setSubProtocol(SubProtocol subProtocol, boolean client, Session session) {
+    public void setSubProtocol(SubProtocol subProtocol, boolean client, Session session) {
         this.clearPackets();
         switch(subProtocol) {
             case HANDSHAKE:

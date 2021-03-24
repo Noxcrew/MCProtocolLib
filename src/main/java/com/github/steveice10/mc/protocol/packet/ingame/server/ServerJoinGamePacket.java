@@ -12,11 +12,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.Setter;
+import lombok.With;
 import net.kyori.adventure.nbt.CompoundBinaryTag;
 
 import java.io.IOException;
 
 @Data
+@With
 @Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor

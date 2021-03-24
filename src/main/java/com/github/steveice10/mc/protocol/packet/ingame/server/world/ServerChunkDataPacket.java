@@ -14,6 +14,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.Setter;
+import lombok.With;
 import net.kyori.adventure.nbt.CompoundBinaryTag;
 
 import java.io.ByteArrayInputStream;
@@ -21,6 +22,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 @Data
+@With
 @Setter(AccessLevel.NONE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor
@@ -44,14 +46,14 @@ public class ServerChunkDataPacket implements Packet {
 
         NetInput dataIn = new StreamNetInput(new ByteArrayInputStream(data));
         Chunk[] chunks = new Chunk[16];
-        for(int index = 0; index < chunks.length; index++) {
-            if((chunkMask & (1 << index)) != 0) {
+        for (int index = 0; index < chunks.length; index++) {
+            if ((chunkMask & (1 << index)) != 0) {
                 chunks[index] = Chunk.read(dataIn);
             }
         }
 
         CompoundBinaryTag[] tileEntities = new CompoundBinaryTag[in.readVarInt()];
-        for(int i = 0; i < tileEntities.length; i++) {
+        for (int i = 0; i < tileEntities.length; i++) {
             tileEntities[i] = NBT.read(in);
         }
 
@@ -65,9 +67,9 @@ public class ServerChunkDataPacket implements Packet {
 
         int mask = 0;
         Chunk[] chunks = this.column.getChunks();
-        for(int index = 0; index < chunks.length; index++) {
+        for (int index = 0; index < chunks.length; index++) {
             Chunk chunk = chunks[index];
-            if(chunk != null && (this.column.getBiomeData() == null || !chunk.isEmpty())) {
+            if (chunk != null && (this.column.getBiomeData() == null || !chunk.isEmpty())) {
                 mask |= 1 << index;
                 Chunk.write(dataOut, chunk);
             }
@@ -89,7 +91,7 @@ public class ServerChunkDataPacket implements Packet {
         out.writeVarInt(dataBytes.size());
         out.writeBytes(dataBytes.toByteArray(), dataBytes.size());
         out.writeVarInt(this.column.getTileEntities().length);
-        for(CompoundBinaryTag tag : this.column.getTileEntities()) {
+        for (CompoundBinaryTag tag : this.column.getTileEntities()) {
             NBT.write(out, tag);
         }
     }
